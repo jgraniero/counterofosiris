@@ -1,0 +1,7 @@
+{
+  "name": "trials-counter",
+  "version": "1.0.0",
+  "description": "simple web app that serves a trials counter",
+  "author": "Joseph Graniero<j.graniero@gmail.com>",
+  "license": "ISC"
+}
