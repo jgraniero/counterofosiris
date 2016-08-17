@@ -1,9 +1,39 @@
 @import '_variables.less';
 
-.win {
-  color: @trials-win-color;
+.counter-list {
+  list-style: none;
+  margin:     0;
+  padding:    0;
+
+  li {
+    display: inline-block;
+  }
 }
 
 .loss {
   color: @trials-loss-color;
+}
+
+.unplayed {
+  opacity: 0.5;
+}
+
+.played {
+  opacity: 1;
+}
+
+.win {
+  color: @trials-win-color;
+}
+
+// test ------
+#win-1 i {
+  animation: blink-animation 1s steps(5, start) 3;
+  opacity: 1;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }

@@ -6,16 +6,16 @@ html(lang='en')
     link(rel='stylesheet', href='#{locals.mainCss}')
   body
     .counter-container
-      .counter-row#wins
-        ul.win-list
+      .counter-row#win-counter
+        ul.counter-list
           - for (var i = 0; i < 9; i++) {
-            li(class='win', id='win-' + i)
+            li(class='win unplayed', id='win-' + i)
               i(class='fa fa-circle', aria-hidden='true')
           - }
-      .counter-row#losses
-        ul.loss-list
+      .counter-row#loss-counter
+        ul.counter-list
           - for(var i = 0; i < 3; i++) {
-            li(class='loss', id='loss-' + i)
+            li(class='loss unplayed', id='loss-' + i)
               i(class='fa fa-circle', aria-hidden='true')
           - }
   script(src='#{locals.indexJs}')
