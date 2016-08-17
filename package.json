@@ -8,20 +8,26 @@
     "autoprefixer": "6.4.0",
     "babelify": "7.3.0",
     "browserify": "13.1.0",
+    "del": "^2.2.2",
     "express": "4.14.0",
+    "font-awesome": "^4.6.3",
     "getenv": "0.6.0",
     "gulp": "3.9.1",
     "gulp-cached": "1.1.0",
     "gulp-eslint": "3.0.1",
-    "gulp-if": "2.0.1",
+    "gulp-if": "^2.0.1",
     "gulp-less": "3.1.0",
     "gulp-minify-css": "1.2.4",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
     "gulp-uglify": "2.0.0",
     "gulp-util": "3.0.7",
     "jade": "1.11.0",
     "normalize.less": "1.0.0",
     "requiredir": "1.0.7",
     "underscore": "1.8.3",
-    "watchify": "3.7.0"
+    "watchify": "3.7.0",
+    "yargs": "^5.0.0"
   }
 }
