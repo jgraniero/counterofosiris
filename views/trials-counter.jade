@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='#{locals.mainCss}')
+  body
+    .counter-container
+      .counter-row#wins
+        ul.win-list
+          - for (var i = 0; i < 9; i++) {
+            li(class='win', id='win-' + i)
+          - }
+      .counter-row#losses
+        ul.loss-list
+          - for(var i = 0; i < 3; i++) {
+            li(class='loss', id='loss-' + i)
+          - }
+  script(src='#{locals.indexJs}')
