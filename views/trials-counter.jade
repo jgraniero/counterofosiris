@@ -10,10 +10,12 @@ html(lang='en')
         ul.win-list
           - for (var i = 0; i < 9; i++) {
             li(class='win', id='win-' + i)
+              i(class='fa fa-circle', aria-hidden='true')
           - }
       .counter-row#losses
         ul.loss-list
           - for(var i = 0; i < 3; i++) {
             li(class='loss', id='loss-' + i)
+              i(class='fa fa-circle', aria-hidden='true')
           - }
   script(src='#{locals.indexJs}')

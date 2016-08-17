@@ -13,7 +13,10 @@ var path = {
   DIST_SRC_JS:            'dist/src/js',
   SRC_JS:                 'src/js/**/*.js',
   SRC_LESS:               'src/css/**/[^_]*.less',
-  SRC_LESS_IMPORT_PATHS:  ['src/css/pages'],
+  SRC_LESS_IMPORT_PATHS:  [
+    'src/css/pages',
+    'src/css/helpers'
+  ],
   SRC_LESS_WITH_PARTIALS: 'src/css/**/*.less',
   VERSION_FILE:           'version_file'
 };
