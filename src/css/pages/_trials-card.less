@@ -10,26 +10,24 @@
   }
 }
 
-.loss {
+#loss-list li {
   color: @trials-loss-color;
+}
+
+.played {
+  opacity: 1;
+
+  i {
+    animation: blink-animation 1s steps(5, start) 3;
+  }
 }
 
 .unplayed {
   opacity: 0.5;
 }
 
-.played {
-  opacity: 1;
-}
-
-.win {
+#win-list li {
   color: @trials-win-color;
-}
-
-// test ------
-#win-1 i {
-  animation: blink-animation 1s steps(5, start) 3;
-  opacity: 1;
 }
 
 @keyframes blink-animation {

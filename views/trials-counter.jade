@@ -7,15 +7,15 @@ html(lang='en')
   body
     .counter-container
       .counter-row#win-counter
-        ul.counter-list
+        ul.counter-list#win-list
           - for (var i = 0; i < 9; i++) {
-            li(class='win unplayed', id='win-' + i)
+            li(class='unplayed', id='win-' + i)
               i(class='fa fa-circle', aria-hidden='true')
           - }
       .counter-row#loss-counter
-        ul.counter-list
+        ul.counter-list#loss-list
           - for(var i = 0; i < 3; i++) {
-            li(class='loss unplayed', id='loss-' + i)
+            li(class='unplayed', id='loss-' + i)
               i(class='fa fa-circle', aria-hidden='true')
           - }
   script(src='#{locals.indexJs}')

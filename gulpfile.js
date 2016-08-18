@@ -11,14 +11,18 @@ function getTask(taskName) {
   return require('./gulp-tasks/' + taskName)(gulp, path, context);
 }
 
+gulp.task('browserify', ['lint'], getTask('browserify'));
 gulp.task('clean', getTask('clean'));
 gulp.task('font-awesome', getTask('font-awesome'));
 gulp.task('icons', getTask('icons'));
 gulp.task('less', getTask('less'));
-gulp.task('watch', ['less', 'icons', 'font-awesome'], getTask('watch'));
+gulp.task('lint', getTask('lint'));
+gulp.task('watch', ['browserify', 'less', 'icons', 'font-awesome'], getTask('watch'));
 
 gulp.task('build', [
   'clean',
+  'lint', 
+  'browserify',
   'icons',
   'font-awesome',
   'less']);
