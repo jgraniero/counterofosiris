@@ -2,10 +2,19 @@ import socketio_client from 'socket.io-client';
 
 function countWin(msg) {
   let winBubbles = document.getElementById('win-list').children;;
-  for (let winBubble of winBubbles) {
-    if (winBubble.classList.contains('unplayed')) {
-      winBubble.classList.remove('unplayed');
-      winBubble.classList.add('played');
+  addPlayedClass(winBubbles);
+}
+
+function countLoss(msg) {
+  let lossBubbles = document.getElementById('loss-list').children;
+  addPlayedClass(lossBubbles);
+}
+
+function addPlayedClass(bubbles) {
+  for (let bubble of bubbles) {
+    if (bubble.classList.contains('unplayed')) {
+      bubble.classList.remove('unplayed');
+      bubble.classList.add('played');
       return;
     }
   }
@@ -13,5 +22,7 @@ function countWin(msg) {
 
 export default function() {
   let io = socketio_client();
+
   io.on('win message', countWin);  
+  io.on('loss message', countLoss);
 }
