@@ -2,6 +2,7 @@ var config            = require('./config')
   , express           = require('express')
   , http              = require('http')
   , lossHandler       = require('./server/loss-handler')
+  , mercyHandler      = require('./server/mercy-handler')
   , socketio          = require('socket.io')
   , trialsCardHandler = require('./server/trials-card-handler')
   , winHandler        = require('./server/win-handler.js')
@@ -51,6 +52,10 @@ app.get('/trialscard/win', function(req, res) {
 
 app.get('/trialscard/loss', function(req, res) {
   lossHandler(req, res, io);
+});
+
+app.get('/trialscard/mercy', function(req, res) {
+  mercyHandler(req, res, io);
 });
 
 // static
