@@ -55,4 +55,5 @@ export default function() {
   io.on('win message', countWin);  
   io.on('loss message', countLoss);
   io.on('mercy message', useMercy);
+  io.on('reset message', reset);
 }
