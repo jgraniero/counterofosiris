@@ -60,7 +60,7 @@ app.get('/trialscard/mercy', function(req, res) {
 });
 
 app.get('/trialscard/reset', function(req, res) {
-  restHandler(req, res, io);
+  resetHandler(req, res, io);
 });
 
 // static
