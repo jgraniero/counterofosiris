@@ -17,7 +17,7 @@ function useMercy() {
 
 function reset() {
   let lossBubbles = document.getElementById('loss-list').children;
-  let winBubbles = document.getElementById('win-list');
+  let winBubbles = document.getElementById('win-list').children;
   let mercyContainer = document.getElementById('mercy-container');
 
   addUnplayedClassToAll(lossBubbles);
