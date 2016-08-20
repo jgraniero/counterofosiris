@@ -15,11 +15,27 @@ function useMercy() {
   replaceClass(mercyContainer, 'unused', 'used');
 }
 
+function reset() {
+  let lossBubbles = document.getElementById('loss-list').children;
+  let winBubbles = document.getElementById('win-list');
+  let mercyContainer = document.getElementById('mercy-container');
+
+  addUnplayedClassToAll(lossBubbles);
+  addUnplayedClassToAll(winBubbles);
+  replaceClass(mercyContainer, 'used', 'unused');
+}
+
 function addPlayedClass(bubbles) {
   for (let bubble of bubbles) {
     if (replaceClass(bubble, 'unplayed', 'played')) {
       return;
     }
+  }
+}
+
+function addUnplayedClassToAll(bubbles) {
+  for (let bubble of bubbles) {
+    replaceClass(bubble, 'played', 'unplayed');
   }
 }
 
