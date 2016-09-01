@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='#{locals.mainCss}')
+  body
+    .counter-container
+      .counter-row#win-counter
+        ul.counter-list#win-list
+          - for (var i = 0; i < 9; i++) {
+            li(class='unplayed', id='win-' + i)
+              i(class='fa fa-circle', aria-hidden='true')
+          - }
+      .counter-row#loss-counter
+        ul.counter-list#loss-list
+          - for(var i = 0; i < 3; i++) {
+            li(class='unplayed', id='loss-' + i)
+              i(class='fa fa-circle', aria-hidden='true')
+          - }
+    #mercy-container.unused
+      #mercy-check
+      #mercy-text
+        |mercy
+  script(src='#{locals.indexJs}')

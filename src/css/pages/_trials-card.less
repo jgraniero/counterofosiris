@@ -1,0 +1,65 @@
+@import '_variables.less';
+
+.counter-list {
+  list-style: none;
+  margin:     0;
+  padding:    0;
+
+  li {
+    display: inline-block;
+  }
+}
+
+.fa {
+  font-size: 5em;
+}
+
+#loss-list li {
+  color: @trials-loss-color;
+}
+
+#mercy-container {
+  .fa;
+
+  div {
+    display: inline-block;
+  }
+
+  &.unused {
+    color: gray;
+
+    &:before {
+      content: @fa-var-square-o;
+    }
+  }
+
+  &.used {
+    color: cornflowerblue;
+
+    &:before {
+      content: @fa-var-check-square-o;
+    }
+  }
+}
+
+.played {
+  opacity: 1;
+
+  i {
+    animation: blink-animation 1s steps(5, start) 3;
+  }
+}
+
+.unplayed {
+  opacity: 0.5;
+}
+
+#win-list li {
+  color: @trials-win-color;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
